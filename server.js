@@ -1,8 +1,8 @@
-const express = require('express')
+const express = require('express');
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 
-const app = express()
+const app = express();
 
 //bodyParser Middleware
 app.use(bodyParser.json());
@@ -26,9 +26,10 @@ app.get('/', (req, res) => {
 //Import routes
 const ItemRoutes = require('./routes/item.router');
 const CustomerRoutes = require('./routes/customer.router');
-
+const employeeRouter =require("./routes/employees.js");
 app.use('/item', ItemRoutes);
 app.use('/customer', CustomerRoutes);
+app.use("/employee",employeeRouter);
 
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`)
