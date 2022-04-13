@@ -25,6 +25,10 @@ const Bill = new Schema({
     },
     discountedAmount: {
         type: Number
+    },
+    date: { 
+        type: Date, 
+        default: Date.now 
     }
 });
 

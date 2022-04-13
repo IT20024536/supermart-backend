@@ -39,6 +39,10 @@ const Delivery = new Schema({
     deliveryCharge: {
         type: Number,
         required: true
+    },
+    date: { 
+        type: Date, 
+        default: Date.now 
     }
 });
 
