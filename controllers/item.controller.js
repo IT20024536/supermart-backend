@@ -17,7 +17,7 @@ class ItemController {
             await newItem.save();
         
             res.status(201).send({
-                newItem,
+                createdItem: newItem,
                 message: "Item Created"
             })
         } catch (error) {
@@ -28,6 +28,38 @@ class ItemController {
         }
     }
 
+    getAllItems = async (req, res) => {
+        try {
+            let items = await Item.find({});
+
+            res.status(200).send({
+                items: items,
+                message: "All items"
+            })
+        } catch (error) {
+            res.status(500).send({
+                message: "Item Not Cannot be get",
+                error: error.message
+            })
+        }
+    }
+
+    getAllAvailableItems = async (req, res) => {
+        try {
+            let items = await Item.find({});
+
+
+            res.status(200).send({
+                items: items.filter(i => i.quantityIn > 0),
+                message: "All Available items"
+            })
+        } catch (error) {
+            res.status(500).send({
+                message: "Item Not Cannot be get",
+                error: error.message
+            })
+        }
+    }
 }
 
 module.exports = new ItemController();
