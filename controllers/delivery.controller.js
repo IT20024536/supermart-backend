@@ -65,12 +65,21 @@ class DeliveryController {
         try {
             const id = req.params.id;
 
-            let del = await Delivery.findOne({deliveryNumber: id});
+            let bill = await Bill.findOne({id: id});
+
+            if(bill == null) {
+                return res.status(200).send({
+                    delivery: null,
+                    message: "Please Enter a Valid Bill Number"
+                })
+            }
+
+            let del = await Delivery.findOne({billNumber: id});
 
             if(del == null) {
-                return res.status(404).send({
+                return res.status(200).send({
                     delivery: null,
-                    message: "Not Found"
+                    message: "No Delivery Details For This Bill Number"
                 })
             }
 
