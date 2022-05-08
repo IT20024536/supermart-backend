@@ -15,7 +15,7 @@ CodeID:{
     type:String,
     required:true
 },
-Department:{
+DepartmentName:{
     type:String,
     required:true
 },
