@@ -1,0 +1,34 @@
+body {
+    background: url( "https://s3-us-west-2.amazonaws.com/s.cdpn.io/652/confectionary.pngs3-us-west-2.amazonaws.com<https://teams.microsoft.com/l/message/19:E-wM6O8krS4RgWAc4vOv8ruA1bbxiRlWwUF4kn069LI1@thread.tacv2/1633376884069?tenantId=44e3cf94-19c9-4e32-96c3-14f5bf01391a&amp;groupId=5bfe1537-3dd4-4c7c-bc2d-6dc6c455a7c4&amp;parentMessageId=1633368377848&amp;teamName=8 Kalliya&amp;channelName=General&amp;createdTime=1633376884069>") fixed;
+   background-size: cover;
+}
+
+.mb-3{
+    width: 900px;
+    float: right;
+    
+    flex: 50%;
+    top: 20px;
+    border:none;
+}
+.btn-primary{
+    width: 900px;
+    float: right;
+    
+    flex: 50%;
+    top: 20px;
+    border:none;
+   
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    float: right;
+    float: top;
+    padding-right: 100px;
+    position:absolute;
+  top: 15px;
+  left: 150px;
+  padding-left: 50px;
+   
+}
