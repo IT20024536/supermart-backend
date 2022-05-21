@@ -1,0 +1,20 @@
+#container3 {
+  background-image: url("../images/emp.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+
+}
+
+.full-window{
+  background-color: cadetblue;
+
+}
+
+#header {
+  background-color: darkgreen;
+}
